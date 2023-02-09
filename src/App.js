@@ -25,6 +25,7 @@ function App() {
                     Say <i>ping</i> to the main process.
                 </p>
                 <input
+                    width="90%"
                     type="text"
                     value={message}
                     onChange={({ target: { value } }) => setMessage(value)}

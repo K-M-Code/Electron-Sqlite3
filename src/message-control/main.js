@@ -11,3 +11,8 @@ ipcMain.on('asynchronous-message', (event, arg) => {
         event.reply('asynchronous-reply', (err && err.message) || rows);
     });
 });
+
+database.get('SELECT * FROM repositories', (err, row) => {
+    if (err) console.error('Database opening error: ', err);
+    console.log('row: ', row);
+});
